@@ -5,25 +5,27 @@ This a practical activity part of the MBA in Data Engineering from XPE. It is ex
 ## What was Done
 
 - [X] Develop a data process api
-- [X] Develop the Dockerfile for encapsulating your solution in
+- [X] Develop the Dockerfile for encapsulating the solution in
 a docker image
 - [X] Build the docker image and push it to some repository
 images (public or private)
-- [X] Implement a manifest for running your solution
-- [X] Run kubectl commands to deploy your solution to your cluster
+- [X] Implement a manifest
+- [X] Run kubectl commands to deploy the solution to a cluster
 kubernetes
 - [X] Verify that the solution was successfully deployed
-- [X] Check the run logs   
+- [X] Check logs   
 
 
 ## Requirements
 
-If you wish to run this api you should have **docker**, **kubernets** and a docker hub account. Follow the steps bellow.
+If you wish to run this api you should have **docker**, **kubernetes** and a docker hub account. Follow the steps bellow.
 
 1. Clone this repo
 
 ```
 git clone 
+
+cd mba-cloud-mod3-practice-bitfinex
 ```
 
 2. Build the image locally
@@ -74,7 +76,7 @@ kubectl create ns site
 kubectl apply -f manifests/
 ```
 
-10. Connect your local port with the container running on kubernets
+10. Connect your local port with the container running on kubernetes
 
 ```
 kubectl port-forward pod/mycoins -n site 5000:5000
